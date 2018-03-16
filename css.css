@@ -1,0 +1,503 @@
+body {
+    width: 1920px;
+    height: 1000px;
+    margin: 0;
+    padding: 0;
+    overflow: visible;
+}
+
+#modal {
+    text-align: center;
+    width: 400px;
+    height: 400px;
+    position: absolute;
+    background-color: white;
+    z-index: 1;
+    padding: 0 10px;
+    top: 25%;
+    left: 0;
+    border-radius: 15px;
+    -webkit-box-shadow:0 1px 4px rgba(0, 0, 0, 0.3), 0 0 40px rgba(0, 0, 0, 0.1) inset;
+    -moz-box-shadow:0 1px 4px rgba(0, 0, 0, 0.3), 0 0 40px rgba(0, 0, 0, 0.1) inset;
+    box-shadow:0 1px 4px rgba(0, 0, 0, 0.3), 0 0 40px rgba(0, 0, 0, 0.1) inset;
+}
+
+.modal {
+    animation-name: appear;
+    animation-fill-mode: forwards;
+    animation-iteration-count: 1;
+    animation-direction: normal;
+    animation-delay: 1s;
+    animation-duration: 1s;
+    opacity: 0;
+}
+
+#talkBubble {
+    animation-name: appear, disappear;
+    animation-fill-mode: forwards, forwards;
+    animation-iteration-count: 1;
+    animation-direction: normal, normal;
+    animation-delay: 2.5s, 7s;
+    animation-duration: .5s, .5s;
+    opacity: 0;
+}
+
+#leftHole {
+    opacity: 0;
+    animation-name: appear;
+    animation-fill-mode: forwards;
+    animation-iteration-count: 1;
+    animation-direction: normal;
+    animation-delay: .95s;
+    animation-duration: .1s;
+    animation-play-state: paused;
+}
+
+#rightHole {
+    opacity: 0;
+    animation-name: appear;
+    animation-fill-mode: forwards;
+    animation-iteration-count: 1;
+    animation-direction: normal;
+    animation-delay: .95s;
+    animation-duration: .1s;
+    animation-play-state: paused;
+}
+
+#flames {
+    opacity: 0;
+    animation-name: appear;
+    animation-fill-mode: forwards;
+    animation-iteration-count: 1;
+    animation-direction: normal;
+    animation-delay: .95s;
+    animation-duration: .1s;
+    animation-play-state: paused;
+}
+
+@keyframes appear {
+    0% { opacity: 0; }
+    100% { opacity: 1; }
+}
+
+@keyframes disappear {
+    0% { opacity: 1; }
+    100% { opacity: 0; }
+}
+
+#boatSVG {
+    animation-name: sinkShip;
+    animation-fill-mode: forwards;
+    animation-iteration-count: 1;
+    animation-duration: 5s;
+    animation-delay: 1s;
+    animation-timing-function: ease-in;
+    animation-play-state: paused;
+}
+
+@keyframes sinkShip {
+    1% {
+        transform: translateY(0px);
+    }
+    100% {
+        transform: translateY(1510px);
+    }
+}
+
+#yourShip {
+    animation-name: shakeYourShip;
+    animation-fill-mode: forwards;
+    animation-iteration-count: 3;
+    animation-direction: alternate;
+    animation-delay: 0s;
+    animation-duration: .1s;
+    animation-timing-function: ease-in-out;
+    animation-play-state: paused;
+}
+
+@keyframes shakeYourShip {
+    1% {
+        transform: translateY(0px);
+    }
+    100% {
+        transform: translateY(10px);
+    }
+}
+
+#plank {
+    animation-name: slideIn;
+    animation-fill-mode: forwards;
+    animation-iteration-count: 1;
+    animation-direction: normal;
+    animation-delay: 0s;
+    animation-duration: 1s;
+    animation-timing-function: ease-in;
+}
+
+@keyframes slideIn {
+    0% {
+        transform: translateX(510px);
+    }
+    100% {
+        transform: translateX(0px);
+    }
+}
+
+#bird {
+    animation-name: slideDown;
+    animation-fill-mode: forwards;
+    animation-iteration-count: 1;
+    animation-direction: normal;
+    animation-delay: 1s;
+    animation-duration: 1s;
+    animation-timing-function: ease-out;
+    transform: translateY(-510px);
+}
+
+@keyframes slideDown {
+    0% {
+        transform: translateY(-510px);
+    }
+    100% {
+        transform: translateY(0px);
+    }
+}
+
+#waveTop, #waveBottom {
+    animation-name: wavesTopAndBottom;
+    animation-fill-mode: forwards;
+    animation-iteration-count: infinite;
+    animation-direction: alternate-reverse;
+    animation-delay: 0s;
+    animation-duration: 1s;
+    animation-timing-function: ease-in-out;
+}
+
+@keyframes wavesTopAndBottom {
+    0% {
+        transform: translateX(-50px);
+    }
+    100% {
+        transform: translateX(0px);
+    }
+}
+
+#waveMiddle {
+    animation-name: wavesMiddle;
+    animation-fill-mode: forwards;
+    animation-iteration-count: infinite;
+    animation-direction: alternate-reverse;
+    animation-delay: 0s;
+    animation-duration: 1.2s;
+    animation-timing-function: ease-in-out;
+}
+
+@keyframes wavesMiddle {
+    0% {
+        transform: translateX(50px);
+    }
+    100% {
+        transform: translateX(0px);
+    }
+}
+
+#sun {
+    animation-name: sunAnim;
+    animation-fill-mode: forwards;
+    animation-iteration-count: infinite;
+    animation-direction: alternate-reverse;
+    animation-delay: 0s;
+    animation-duration: 2s;
+    animation-timing-function: ease-in-out;
+}
+
+@keyframes sunAnim {
+    0% {
+        transform: scale(1.1);
+    }
+    100% {
+        transform: scale(1);
+    }
+}
+
+#right {
+    animation-name: saildown;
+    animation-fill-mode: forwards;
+    animation-iteration-count: 1;
+    animation-direction: normal;
+    animation-delay: .4s;
+    animation-duration: 2s;
+    animation-timing-function: ease-in-out;
+    animation-play-state: paused;
+}
+
+@keyframes saildown {
+    0% {
+        transform: rotate(0deg);
+    }
+    50% {
+        transform: rotate(10deg);
+    }
+    100% {
+        transform: rotate(30deg);
+    }
+}
+
+#left {
+    animation-name: saildown;
+    animation-fill-mode: forwards;
+    animation-iteration-count: 1;
+    animation-direction: normal;
+    animation-delay: .4s;
+    animation-duration: 2s;
+    animation-timing-function: ease-in-out;
+    animation-play-state: paused;
+}
+
+#cannon {
+    z-index: 2;
+}
+
+.cannon {
+    animation-name: fireCannon;
+    animation-fill-mode: forwards;
+    animation-iteration-count: 2;
+    animation-direction: normal;
+    animation-delay: 0s;
+    animation-duration: .1s;
+    animation-timing-function: ease-in-out;
+}
+
+@keyframes fireCannon {
+    0% {
+        transform: translateY(0px);
+    }
+    50% {
+        transform: translateY(10px);
+    }
+    100% {
+        transform: translateY(0px);
+    }
+}
+
+#cannonSmoke {
+    opacity: 0;
+    z-index: 2;
+}
+
+.cannonSmoke {
+    animation-name: cannonSmoking;
+    animation-fill-mode: forwards;
+    animation-iteration-count: 1;
+    animation-direction: normal;
+    animation-delay: 0s;
+    animation-duration: .5s;
+    animation-timing-function: ease-in-out;
+    opacity: 0!important;
+}
+
+@keyframes cannonSmoking {
+    0% {
+        opacity: 0;
+    }
+    25% {
+        opacity: 1;
+    }
+    75% {
+        opacity: 1;
+    }
+    100% {
+        opacity: 0;
+    }
+}
+
+#cannonballLeft {
+    width: 100px;
+    height: 100px;
+    background: black;
+    z-index: 1;
+    position: absolute;
+    top: 620px;
+    left: 889px;
+    border-radius: 100px;
+    animation-name: cannonballHitLeft;
+    animation-fill-mode: forwards;
+    animation-iteration-count: 1;
+    animation-direction: normal;
+    animation-delay: 0s;
+    animation-duration: 1s;
+    animation-timing-function: ease-out;
+    opacity: 0!important;
+    filter: blur(2px);
+    animation-play-state: paused;
+}
+
+@keyframes cannonballHitLeft {
+    0% {
+        opacity: 0;
+        transform: scale(1.0);
+    }
+    1% {
+        opacity: 1;
+        transform: scale(1.0);
+    }
+    50% {
+        opacity: 1;
+        transform: scale(.7) translateY(-650px) translateX(-120px);
+    }
+    99% {
+        opacity: 1;
+        transform: scale(.3) translateY(-600px) translateX(-240px);
+    }
+    100% {
+        opacity: 0;
+        transform: scale(.3) translateY(-600px) translateX(-240px);
+    }
+}
+
+#cannonballRight {
+    width: 100px;
+    height: 100px;
+    background: black;
+    z-index: 1;
+    position: absolute;
+    top: 620px;
+    left: 889px;
+    border-radius: 100px;
+    animation-name: cannonballHitRight;
+    animation-fill-mode: forwards;
+    animation-iteration-count: 1;
+    animation-direction: normal;
+    animation-delay: 0s;
+    animation-duration: 1s;
+    animation-timing-function: ease-out;
+    opacity: 0!important;
+    filter: blur(2px);
+    animation-play-state: paused;
+}
+
+@keyframes cannonballHitRight {
+    0% {
+        opacity: 0;
+        transform: scale(1.0);
+    }
+    1% {
+        opacity: 1;
+        transform: scale(1.0);
+    }
+    50% {
+        opacity: 1;
+        transform: scale(.7) translateY(-750px) translateX(380px);
+    }
+    99% {
+        opacity: 1;
+        transform: scale(.3) translateY(-700px) translateX(770px);
+    }
+    100% {
+        opacity: 0;
+        transform: scale(.3) translateY(-700px) translateX(770px);
+    }
+}
+
+#cannonballFinal {
+    width: 100px;
+    height: 100px;
+    background: black;
+    z-index: 1;
+    position: absolute;
+    top: 620px;
+    left: 889px;
+    border-radius: 100px;
+    animation-name: cannonballHitFinal;
+    animation-fill-mode: forwards;
+    animation-iteration-count: 1;
+    animation-direction: normal;
+    animation-delay: 0s;
+    animation-duration: 1s;
+    animation-timing-function: ease-out;
+    opacity: 0!important;
+    filter: blur(2px);
+    animation-play-state: paused;
+}
+
+@keyframes cannonballHitFinal {
+    0% {
+        opacity: 0;
+        transform: scale(1.0);
+    }
+    1% {
+        opacity: 1;
+        transform: scale(1.0);
+    }
+    50% {
+        opacity: 1;
+        transform: scale(.7) translateY(-850px);
+    }
+    99% {
+        opacity: 1;
+        transform: scale(.3) translateY(-800px);
+    }
+    100% {
+        opacity: 0;
+        transform: scale(.3) translateY(-800px);
+    }
+}
+
+.cannonballMiss {
+    width: 100px;
+    height: 100px;
+    background: black;
+    z-index: 1;
+    position: absolute;
+    top: 620px;
+    left: 889px;
+    border-radius: 100px;
+    animation-name: cannonballMiss;
+    animation-fill-mode: forwards;
+    animation-iteration-count: 1;
+    animation-direction: normal;
+    animation-delay: 0s;
+    animation-duration: 1s;
+    animation-timing-function: ease-out;
+    opacity: 0!important;
+    filter: blur(2px);
+}
+
+@keyframes cannonballMiss {
+    0% {
+        opacity: 0;
+        transform: scale(1.0);
+    }
+    1% {
+        opacity: 1;
+        transform: scale(1.0);
+    }
+    50% {
+        opacity: 1;
+        transform: scale(.7) translateY(-550px);
+    }
+    99% {
+        opacity: 1;
+        transform: scale(.3) translateY(-500px);
+    }
+    100% {
+        opacity: 0;
+        transform: scale(.3) translateY(-500px);
+    }
+}
+
+#missText {
+    position: absolute;
+    top: 50%;
+    left: 44%;
+    font-size: 6em;
+    font-weight: bold;
+    color: rgba(0,0,0,.9);
+    display: none;
+    background-color: rgba(255,255,255,.6);
+    border-radius: 30px;
+}
+
+audio {
+    display: none;
+}
