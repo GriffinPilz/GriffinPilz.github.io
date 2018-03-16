@@ -7,6 +7,11 @@ let audio = new Audio('cannonSound.mp3');
 let audio2 = new Audio('Fire2.mp3');
 let audio3 = new Audio('woodSnap.mp3');
 
+function startGame() {
+    document.getElementById("menuContainer").style.display = "none";
+    document.getElementById("gameContainer").style.display = "inline";
+}
+
 let playLoop = function () {
     audio.play();
 };

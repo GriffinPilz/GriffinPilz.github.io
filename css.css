@@ -501,3 +501,14 @@ body {
 audio {
     display: none;
 }
+
+button {
+    background-color: #29abe2;
+    border-radius: 10px;
+    box-shadow: 0 8px 6px -6px black;
+    font-size: 1.5em;
+    font-weight: bold;
+    border-style: solid;
+    border-color: #29abe2;
+    border-width: 1px;
+}
