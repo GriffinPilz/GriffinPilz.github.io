@@ -7,6 +7,7 @@ let audio = new Audio('cannonSound.mp3');
 let audio2 = new Audio('Fire2.mp3');
 let audio3 = new Audio('woodSnap.mp3');
 let audio4 = new Audio('splash.mp3');
+let audio5 = new Audio('taDa.mp3');
 
 function startGame() {
     document.getElementById("menuContainer").style.display = "none";
@@ -28,6 +29,11 @@ let playLoop3 = function () {
 
 let playLoop4 = function () {
     audio4.play();
+};
+
+let playLoop5 = function () {
+    console.log("PLAY");
+    audio5.play();
 };
 
 function insertDistance() {
@@ -68,6 +74,11 @@ function onEquationSubmit() {
             setTimeout(function () {
                 playLoop2();
             }, 1000);
+            setTimeout(function () {
+                playLoop5();
+                document.getElementById("gameContainer").style.display = "none";
+                document.getElementById("winnerDiv").style.display = "inline";
+            }, 3500);
         }
         if (round === 2) {
             document.getElementById("cannonballLeft").style.animationPlayState = "running";
@@ -175,4 +186,3 @@ let returnBoat = function () {
         shakeCount = 0;
     }
 };
-
