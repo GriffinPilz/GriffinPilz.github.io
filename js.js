@@ -109,6 +109,7 @@ function onEquationSubmit() {
        setTimeout(function () {
            elementMiss.classList.remove("cannonballMiss");
            playLoop4();
+           checkPlank();
        }, 1000);
        setTimeout(function () {
            document.getElementById("missText").style.display = "none";
@@ -133,6 +134,20 @@ element.addEventListener("click", function() {
     }, 1000);
 }, true);
 
+
+function checkPlank() {
+    plankCount++;
+    if (plankCount === 3) {
+        document.getElementById("bird").classList.remove("bird2");
+        document.getElementById("bird").classList.add("bird3");
+    } else if (plankCount === 2) {
+        document.getElementById("bird").classList.remove("bird1");
+        document.getElementById("bird").classList.add("bird2");
+    } else if (plankCount === 1) {
+        document.getElementById("bird").classList.remove("bird0");
+        document.getElementById("bird").classList.add("bird1");
+    }
+}
 
 /*
 *
@@ -160,3 +175,4 @@ let returnBoat = function () {
         shakeCount = 0;
     }
 };
+

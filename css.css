@@ -144,23 +144,82 @@ body {
     }
 }
 
-#bird {
-    animation-name: slideDown;
+.bird0 {
+    animation-name: moveTo0;
     animation-fill-mode: forwards;
     animation-iteration-count: 1;
     animation-direction: normal;
     animation-delay: 1s;
     animation-duration: 1s;
     animation-timing-function: ease-out;
-    transform: translateY(-510px);
+    transform: translateY(-580px) translateX(0px);
 }
 
-@keyframes slideDown {
+@keyframes moveTo0 {
     0% {
-        transform: translateY(-510px);
+        transform: translateY(-580px) translateX(0px);
     }
     100% {
-        transform: translateY(0px);
+        transform: translateY(0px) translateX(0px);
+    }
+}
+
+.bird1 {
+    animation-name: moveTo1;
+    animation-fill-mode: forwards;
+    animation-iteration-count: 1;
+    animation-direction: normal;
+    animation-delay: 1s;
+    animation-duration: 1s;
+    animation-timing-function: ease-out;
+}
+
+@keyframes moveTo1 {
+    0% {
+        transform: translateX(0px);
+    }
+    100% {
+        transform: translateX(-70px);
+    }
+}
+
+.bird2 {
+    animation-name: moveTo2;
+    animation-fill-mode: forwards;
+    animation-iteration-count: 1;
+    animation-direction: normal;
+    animation-delay: 1s;
+    animation-duration: 1s;
+    animation-timing-function: ease-out;
+    transform: translateX(-70px);
+}
+
+@keyframes moveTo2 {
+    0% {
+        transform: translateX(-70px);
+    }
+    100% {
+        transform: translateX(-140px);
+    }
+}
+
+.bird3 {
+    animation-name: plunk;
+    animation-fill-mode: forwards;
+    animation-iteration-count: 1;
+    animation-direction: normal;
+    animation-delay: 1s;
+    animation-duration: 1s;
+    animation-timing-function: ease-out;
+    transform: translateY(0px) translateX(-140px);
+}
+
+@keyframes plunk {
+    0% {
+        transform: translateY(0px) translateX(-140px);
+    }
+    100% {
+        transform: translateY(800px) translateX(-200px);
     }
 }
 
