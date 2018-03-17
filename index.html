@@ -33,6 +33,7 @@
             <h2 style="display: inline-block">X</h2>
         </div>
         <button type="button" id="button1" style="width: 66%; height: 40px;" onclick="onEquationSubmit()">Submit</button>
+        <h3 id="turnsLeft"></h3>
     </div>
 
     <audio controls>
@@ -276,7 +277,12 @@
 
 </div>
 <div id="winnerDiv" style="text-align: center; display: none;">
-    <h1 style="font-size: 3.5em; margin-top: 400px;">Winner!</h1>
+    <h1 style="font-size: 3.5em; margin-top: 400px;"><b style="color: #a864fd;">W</b><b style="color: #29cdff;">i</b><b style="color: #78ff44;">n</b><b style="color: #ff718d;">n</b><b style="color: #29cdff;">e</b><b style="color: #fdff6a;">r</b><b style="color: #a864fd;">!</b></h1>
+</div>
+
+<div id="loserDiv" style="text-align: center; display: none;">
+    <h1 style="font-size: 3.5em; margin-top: 400px;">Play Again?</h1>
+    <button  type="button" id="buttonRestart" style="width: 300px; height: 40px; margin: auto; text-align: center" onclick="startGame()">Retry</button>
 </div>
     <script src="js.js"></script>
 </body>

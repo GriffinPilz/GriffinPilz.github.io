@@ -2,6 +2,7 @@ let round = 1;
 let xTemp = 400;
 let shakeCount = 0;
 let plankCount = 0;
+let lives = 3;
 
 let audio = new Audio('cannonSound.mp3');
 let audio2 = new Audio('Fire2.mp3');
@@ -10,7 +11,16 @@ let audio4 = new Audio('splash.mp3');
 let audio5 = new Audio('taDa.mp3');
 
 function startGame() {
+    lives = 3;
+    plankCount = 0;
+    shakeCount = 0;
+    round = 1;
+    document.getElementById("bird").classList.remove("bird2");
+    document.getElementById("bird").classList.add("bird0");
+    document.getElementById("modal").style.display = "inline";
+    turnsLeft();
     document.getElementById("menuContainer").style.display = "none";
+    document.getElementById("loserDiv").style.display = "none";
     document.getElementById("gameContainer").style.display = "inline";
     document.getElementById("backgroundMusic").parentNode.removeChild(document.getElementById("backgroundMusic"));
 }
@@ -38,6 +48,10 @@ let playLoop5 = function () {
 
 function insertDistance() {
     document.getElementById("distance").innerHTML = ' '+xTemp+' ';
+}
+
+function turnsLeft() {
+    document.getElementById("turnsLeft").innerHTML = "you have "+lives+" tries left";
 }
 
 function setDistance() {
@@ -114,20 +128,26 @@ function onEquationSubmit() {
         }
    } else {
        console.log("miss");
-       document.getElementById("missText").style.display = "inline";
-       elementMiss = document.getElementById("cannonballMiss");
-       elementMiss.classList.add("cannonballMiss");
-       setTimeout(function () {
-           elementMiss.classList.remove("cannonballMiss");
-           playLoop4();
-           checkPlank();
-       }, 1000);
-       setTimeout(function () {
-           document.getElementById("missText").style.display = "none";
-       }, 2000);
-        document.getElementById("modal").style.display = "inline";
+       lives--;
+       if (lives === 0) {
+           document.getElementById("loserDiv").style.display = "block";
+           document.getElementById("gameContainer").style.display = "none";
+       } else {
+           turnsLeft();
+           document.getElementById("missText").style.display = "inline";
+           elementMiss = document.getElementById("cannonballMiss");
+           elementMiss.classList.add("cannonballMiss");
+           setTimeout(function () {
+               elementMiss.classList.remove("cannonballMiss");
+               playLoop4();
+               checkPlank();
+           }, 1000);
+           setTimeout(function () {
+               document.getElementById("missText").style.display = "none";
+           }, 2000);
+           document.getElementById("modal").style.display = "inline";
+       }
    }
-
 }
 
 // retrieve the element
