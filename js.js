@@ -6,10 +6,12 @@ let plankCount = 0;
 let audio = new Audio('cannonSound.mp3');
 let audio2 = new Audio('Fire2.mp3');
 let audio3 = new Audio('woodSnap.mp3');
+let audio4 = new Audio('splash.mp3');
 
 function startGame() {
     document.getElementById("menuContainer").style.display = "none";
     document.getElementById("gameContainer").style.display = "inline";
+    document.getElementById("backgroundMusic").parentNode.removeChild(document.getElementById("backgroundMusic"));
 }
 
 let playLoop = function () {
@@ -22,6 +24,10 @@ let playLoop2 = function () {
 
 let playLoop3 = function () {
     audio3.play();
+};
+
+let playLoop4 = function () {
+    audio4.play();
 };
 
 function insertDistance() {
@@ -102,6 +108,7 @@ function onEquationSubmit() {
        elementMiss.classList.add("cannonballMiss");
        setTimeout(function () {
            elementMiss.classList.remove("cannonballMiss");
+           playLoop4();
        }, 1000);
        setTimeout(function () {
            document.getElementById("missText").style.display = "none";

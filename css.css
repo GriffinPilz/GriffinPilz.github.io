@@ -4,6 +4,7 @@ body {
     margin: 0;
     padding: 0;
     overflow: visible;
+    background-color: rgb(240,240,240);
 }
 
 #modal {

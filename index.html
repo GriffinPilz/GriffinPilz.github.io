@@ -11,7 +11,7 @@
 <div id="menuContainer" style="display: inline">
     <div style="text-align: center; margin-top: 100px; color: rgba(0,0,0,.8);">
         <h1 style="font-size: 3.5em;">Quadratic Game</h1>
-        <h3 style="font-size: 1.8em; margin: 20px 200px;">The object of the game is to sink the ship. This is done by entering in the correct equation so that your line passes through the origin and where the boats is located on the x-axis.</h3>
+        <h3 style="font-size: 1.8em; margin: 20px 200px;">The object of the game is to sink the ship. This is done by entering in the correct equation, 3 times, so that your line passes through the origin and where the boats is located on the x-axis. The distance of the ship will change every turn, so your equation will have to as well.</h3>
         <img src="graphPic.PNG" alt="Graph Picture">
         <h3 style="font-size: 1.8em; margin: 20px 200px;">While there are a number of different ways to do this, I highly recommend keeping the X-intercept in mind...<br> (x - *x-intercept)<br><br>Good Luck!</h3>
         <button type="button" id="buttonStart" style="width: 300px; height: 40px; margin-bottom: 100px;" onclick="startGame()">Play</button>
@@ -35,11 +35,13 @@
         <button type="button" id="button1" style="width: 66%; height: 40px;" onclick="onEquationSubmit()">Submit</button>
     </div>
 
-    <audio controls >
+    <audio controls>
         <source src="cannonSound.mp3" type="audio/mpeg" id="sound1">
         <source src="Fire2.mp3" type="audio/mpeg" id="sound2">
         <source src="woodSnap.mp3" type="audio/mpeg" id="sound3">
     </audio>
+
+    <iframe id="backgroundMusic" width="0" height="0" scrolling="no" frameborder="no" allow="autoplay" src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/106561370&color=%23ff5500&auto_play=true&hide_related=false&show_comments=true&show_user=true&show_reposts=false&show_teaser=true&visual=true"></iframe>
 
     <svg id="Layer_1" data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" viewBox="70 0 1920 1000">
         <defs>
