@@ -44,5 +44,6 @@ function placeDots() {
 
 function raiseBody() {
     document.getElementById("upperBody").style.animationPlayState = "running";
+    document.getElementById("contactMe").style.animationPlayState = "running";
     document.getElementById("clicker").style.display = "none";
 }

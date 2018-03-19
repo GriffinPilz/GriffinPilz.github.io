@@ -1,6 +1,9 @@
 @import url('https://fonts.googleapis.com/css?family=Luckiest+Guy|Shrikhand');
 
 body {
+    position: absolute;
+    top: 0;
+    left: 0;
     width: 100%;
     height: 100%;
     background-color: #adc7ce;
@@ -13,7 +16,6 @@ h1 {
     left: 100%;
     color: white;
     width: 500px;
-    /*font-family: 'Shrikhand', cursive;*/
     font-family: 'Luckiest Guy', cursive;
     font-size: 7em;
     display: inline-block;
@@ -393,6 +395,8 @@ h1 {
     animation-delay: 0s;
     animation-duration: 5s;
     animation-timing-function: linear;
+    margin: 0;
+    padding: 0;
 }
 
 .recentProject:hover {
@@ -414,7 +418,10 @@ h1 {
 
 h3 {
     font-size: 3em;
+    font-family: 'Shrikhand', cursive;
+    color: #e59674;
 }
+
 
 @keyframes floatIn{
     0% {
@@ -423,4 +430,34 @@ h3 {
     100% {
         transform: translateX(0px);
     }
+}
+
+#contactMe {
+    position: absolute;
+    top: 1100px;
+    left: 34%;
+    width: 600px;
+    height: 400px;
+    text-align: center;
+    z-index: 3;
+    background-color: rgba(255,255,255,.8);
+    border-radius: 30px;
+    animation-name: raiseBody;
+    animation-fill-mode: forwards;
+    animation-iteration-count: 1;
+    animation-direction: normal;
+    animation-delay: 0s;
+    animation-duration: 2s;
+    animation-timing-function: linear;
+    animation-play-state: paused;
+}
+
+a {
+    text-decoration: none;
+}
+
+h4 {
+    font-size: 1.7em;
+    font-family: 'Luckiest Guy', cursive;
+    color: #274852;
 }
