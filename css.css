@@ -1,0 +1,280 @@
+@import url('https://fonts.googleapis.com/css?family=Luckiest+Guy|Shrikhand');
+
+body {
+    width: 100%;
+    height: 100%;
+    background-color: #adc7ce;
+    overflow: hidden;
+}
+
+h1 {
+    position: absolute;
+    top: 150px;
+    left: 100%;
+    color: white;
+    width: 500px;
+    /*font-family: 'Shrikhand', cursive;*/
+    font-family: 'Luckiest Guy', cursive;
+    font-size: 7em;
+    display: inline-block;
+    animation-name: moveText;
+    animation-fill-mode: forwards;
+    animation-iteration-count: 1;
+    animation-direction: normal;
+    animation-delay: 0s;
+    animation-duration: 15s;
+    animation-timing-function: linear;
+}
+
+@keyframes moveText {
+    0% {
+        left: 100%;
+    }
+    100% {
+        left: -50%;
+    }
+}
+
+
+.clickerOG {
+    width: 50px;
+    height: 50px;
+    position: absolute;
+    top: 45%;
+    left: 95%;
+    font-weight: bold;
+    font-size: 2.6em;
+    text-align: center;
+    background-color: white;
+    margin: 3px 0 0 0;
+    padding: 0;
+    border-radius: 100px;
+    border-color: #274852;
+    border-style: solid;
+    border-width: 2px;
+    color: #274852;
+}
+
+.clicker {
+    width: 50px;
+    height: 50px;
+    position: absolute;
+    top: 45%;
+    left: 95%;
+    font-weight: bold;
+    font-size: 2.6em;
+    text-align: center;
+    margin: 3px 0 0 0;
+    padding: 0;
+    border-radius: 100px;
+    animation-name: changeBackToClicker;
+    animation-fill-mode: forwards;
+    animation-iteration-count: 1;
+    animation-direction: normal;
+    animation-delay: 0s;
+    animation-duration: .25s;
+    animation-timing-function: linear;
+}
+
+@keyframes changeBackToClicker {
+    0% {
+        background-color: #e59674;
+        color: #c6e1e8;
+        border-color: #e59674;
+        border-style: solid;
+        border-width: 2px;
+    }
+    100% {
+        border-color: #274852;
+        border-style: solid;
+        border-width: 2px;
+        background-color: white;
+        color: #274852;
+    }
+}
+
+.clickerHover {
+    width: 50px;
+    height: 50px;
+    position: absolute;
+    top: 45%;
+    left: 95%;
+    font-weight: bold;
+    font-size: 2.6em;
+    text-align: center;
+    margin: 3px 0 0 0;
+    padding: 0;
+    border-radius: 100px;
+    animation-name: changeToHoverClicker;
+    animation-fill-mode: forwards;
+    animation-iteration-count: 1;
+    animation-direction: normal;
+    animation-delay: 0s;
+    animation-duration: .25s;
+    animation-timing-function: linear;
+}
+
+@keyframes changeToHoverClicker {
+    0% {
+        border-color: #274852;
+        border-style: solid;
+        border-width: 2px;
+        color: #274852;
+    }
+    100% {
+        background-color: #e59674;
+        color: #c6e1e8;
+        border-color: #e59674;
+        border-style: solid;
+        border-width: 2px;
+    }
+}
+
+#sailboatSVG {
+    position: absolute;
+    height: 350px;
+    width: 350px;
+}
+
+#cloudSVG1 {
+    position: absolute;
+    top: 110px;
+    left: 1920px;
+    height: 150px;
+    width: 150px;
+    animation-name: moveClouds;
+    animation-fill-mode: forwards;
+    animation-iteration-count: infinite;
+    animation-direction: normal;
+    animation-delay: 0s;
+    animation-duration: 30s;
+    animation-timing-function: linear;
+}
+
+#cloudSVG2 {
+    position: absolute;
+    top: 180px;
+    left: 1920px;
+    height: 300px;
+    width: 300px;
+    animation-name: moveClouds;
+    animation-fill-mode: forwards;
+    animation-iteration-count: infinite;
+    animation-direction: normal;
+    animation-delay: 9s;
+    animation-duration: 27s;
+    animation-timing-function: linear;
+}
+
+#cloudSVG3 {
+    position: absolute;
+    top: 0;
+    left: 1920px;
+    height: 250px;
+    width: 250px;
+    animation-name: moveClouds;
+    animation-fill-mode: forwards;
+    animation-iteration-count: infinite;
+    animation-direction: normal;
+    animation-delay: 15s;
+    animation-duration: 29s;
+    animation-timing-function: linear;
+}
+
+#cloudSVG4 {
+    position: absolute;
+    top: 70px;
+    left: 1920px;
+    height: 200px;
+    width: 200px;
+    animation-name: moveClouds;
+    animation-fill-mode: forwards;
+    animation-iteration-count: infinite;
+    animation-direction: normal;
+    animation-delay: 19s;
+    animation-duration: 32s;
+    animation-timing-function: linear;
+}
+
+#cloudSVG5 {
+    position: absolute;
+    top: 230px;
+    left: 1920px;
+    height: 250px;
+    width: 250px;
+    animation-name: moveClouds;
+    animation-fill-mode: forwards;
+    animation-iteration-count: infinite;
+    animation-direction: normal;
+    animation-delay: 23s;
+    animation-duration: 25s;
+    animation-timing-function: linear;
+}
+
+@keyframes moveClouds {
+    0% {
+        transform: translateX(0px);
+    }
+    100% {
+        transform: translateX(-2420px);
+    }
+}
+
+.wavesSailing {
+    position: absolute;
+    top: 50%;
+    left: 10%;
+    animation-name: wavesSailing;
+    animation-fill-mode: forwards;
+    animation-iteration-count: infinite;
+    animation-direction: normal;
+    animation-delay: 0s;
+    animation-duration: 3s;
+    animation-timing-function: linear;
+}
+
+@keyframes wavesSailing {
+    0% {
+        transform: translateY(0px) rotate(0deg);
+    }
+    25% {
+        transform: translateY(25px) rotate(16deg);
+    }
+    50% {
+        transform: translateY(50px) rotate(-4deg);
+    }
+    70% {
+        transform:translateY(25px) rotate(-18deg);
+    }
+    100% {
+        transform: translateY(0px) rotate(0deg);
+    }
+}
+
+.dot {
+    background-color: #0082c8;
+    border-top-width: 1px;
+    border-top-style: solid;
+    border-color: #11596b;
+    width: 7px;
+    height: 390px;
+    position: absolute;
+    z-index: 1;
+    border-radius: 6px;
+    animation-name: waveMove;
+    animation-fill-mode: forwards;
+    animation-iteration-count: infinite;
+    animation-direction: normal;
+    animation-delay: .3s;
+    animation-duration: 3s;
+    animation-timing-function: linear;
+}
+
+@keyframes waveMove{
+    0% {
+        transform: translateY(0px);
+    }
+    100% {
+        transform: translateX(-430px);
+    }
+}
