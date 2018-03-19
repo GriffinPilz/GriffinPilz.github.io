@@ -17,6 +17,8 @@ function changeClassClicker() {
 let sinDots = [];
 
 (function () {
+    document.getElementById("upperBody").style.width = window.innerWidth+"px";
+    document.getElementById("upperBody").style.height = window.innerHeight+"px";
     for ( i = 0; i <= 14; i += 0.02 ) {
         x = i*200;
         y = Math.sin( x/69 )/.04 + 885;
@@ -30,13 +32,17 @@ function placeDots() {
     for (i=0;i<sinDots.length;i++){
         let newDot = document.createElement("div");
         newDot.classList.add("dot");
-        newDot.setAttribute("id", "dot"+i);
-
 
         newDot.style.setProperty("top", sinDots[i].yCoord + "px");
         newDot.style.setProperty("left", sinDots[i].xCoord + "px");
 
-        let placementDiv = document.getElementById("placementDiv");
-        document.body.insertBefore(newDot, placementDiv)
+        //let placementDiv = document.getElementById("upperBody");
+        document.getElementById("upperBody").appendChild(newDot);
+        //document.body.insertBefore(newDot, placementDiv)
     }
+}
+
+function raiseBody() {
+    document.getElementById("upperBody").style.animationPlayState = "running";
+    document.getElementById("clicker").style.display = "none";
 }
