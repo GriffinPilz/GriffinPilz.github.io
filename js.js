@@ -21,7 +21,7 @@ let sinDots = [];
     document.getElementById("upperBody").style.height = window.innerHeight+"px";
     for ( i = 0; i <= 14; i += 0.02 ) {
         x = i*200;
-        y = Math.sin( x/69 )/.04 + 885;
+        y = Math.sin( x/69 )/.04 + (window.innerHeight*.88);
         let dotCoords = {xCoord: x, yCoord: y};
         sinDots.push(dotCoords);
     }
@@ -36,14 +36,13 @@ function placeDots() {
         newDot.style.setProperty("top", sinDots[i].yCoord + "px");
         newDot.style.setProperty("left", sinDots[i].xCoord + "px");
 
-        //let placementDiv = document.getElementById("upperBody");
         document.getElementById("upperBody").appendChild(newDot);
-        //document.body.insertBefore(newDot, placementDiv)
     }
 }
 
 function raiseBody() {
     document.getElementById("upperBody").style.animationPlayState = "running";
     document.getElementById("contactMe").style.animationPlayState = "running";
+    document.getElementById("fishSVG").style.animationPlayState = "running";
     document.getElementById("clicker").style.display = "none";
 }

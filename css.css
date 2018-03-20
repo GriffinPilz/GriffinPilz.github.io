@@ -1,5 +1,26 @@
 @import url('https://fonts.googleapis.com/css?family=Luckiest+Guy|Shrikhand');
 
+
+@media screen and (-ms-high-contrast: active), (-ms-high-contrast: none) {
+    #upperBody {
+        display: none;
+    }
+
+    #contactMe {
+        display: none;
+    }
+
+    #fishSVG {
+        display: none;
+    }
+
+    #pleaseUseOther {
+        display: inline-block!important;
+        text-align: center;
+        width: 100%;
+    }
+}
+
 body {
     position: absolute;
     top: 0;
@@ -460,4 +481,158 @@ h4 {
     font-size: 1.7em;
     font-family: 'Luckiest Guy', cursive;
     color: #274852;
+}
+
+img {
+    width: 400px;
+    height: auto;
+}
+
+#fishSVG {
+    position: absolute;
+    top: 130%;
+    right: 30px;
+    height: 250px;
+    width: 250px;
+    animation-name: raiseBody;
+    animation-fill-mode: forwards;
+    animation-iteration-count: 1;
+    animation-direction: normal;
+    animation-delay: 0s;
+    animation-duration: 2s;
+    animation-timing-function: linear;
+    animation-play-state: paused;
+}
+
+.fishy {
+    animation-name: swim;
+    animation-fill-mode: forwards;
+    animation-iteration-count: infinite;
+    animation-direction: normal;
+    animation-delay: 0s;
+    animation-duration: 5s;
+    animation-timing-function: linear;
+}
+
+@keyframes swim {
+    0% {
+        transform: rotate(0deg) translateY(0px) translateX(0px);
+    }
+    25% {
+        transform: rotate(10deg) translateY(30px) translateX(10px);
+    }
+    50% {
+        transform: rotate(0deg) translateY(60px) translateX(20px);
+    }
+    75% {
+        transform: rotate(-10deg) translateY(30px) translateX(10px);
+    }
+    100% {
+        transform: rotate(0deg) translateY(0px) translateX(0px);
+    }
+}
+
+.bubble1 {
+    opacity: 0;
+    animation-name: bubbleUp;
+    animation-fill-mode: forwards;
+    animation-iteration-count: infinite;
+    animation-direction: normal;
+    animation-delay: 0s;
+    animation-duration: 4s;
+    animation-timing-function: linear;
+}
+
+.bubble2 {
+    opacity: 0;
+    animation-name: bubbleUp;
+    animation-fill-mode: forwards;
+    animation-iteration-count: infinite;
+    animation-direction: normal;
+    animation-delay: 1.5s;
+    animation-duration: 4s;
+    animation-timing-function: linear;
+}
+
+.bubble3 {
+    opacity: 0;
+    animation-name: bubbleUp;
+    animation-fill-mode: forwards;
+    animation-iteration-count: infinite;
+    animation-direction: normal;
+    animation-delay: 3s;
+    animation-duration: 4s;
+    animation-timing-function: linear;
+}
+
+@keyframes bubbleUp {
+    0% {
+        opacity: 1;
+        transform: translateX(0px) translateY(0px);
+    }
+    10% {
+        transform: translateX(0px) translateY(0px);
+    }
+    30% {
+        transform: translateX(20px) translateY(-30px);
+    }
+    60% {
+        opacity: 1;
+        transform: translateX(0px) translateY(-60px);
+    }
+    100% {
+        opacity: 0;
+        transform: translateX(0px) translateY(-120px);
+    }
+}
+
+.eyeball {
+    animation-name: lookAround;
+    animation-fill-mode: forwards;
+    animation-iteration-count: infinite;
+    animation-direction: normal;
+    animation-delay: 0s;
+    animation-duration: 4s;
+    animation-timing-function: linear;
+}
+
+@keyframes lookAround {
+    0% {
+        transform: translateX(0px) translateY(0px);
+    }
+    80% {
+        transform: translateX(-8px) translateY(-8px);
+    }
+    100% {
+        transform: translateX(0px) translateY(0px);
+    }
+}
+
+.tailFin {
+    animation-name: tailMove;
+    animation-fill-mode: forwards;
+    animation-iteration-count: infinite;
+    animation-direction: normal;
+    animation-delay: 0s;
+    animation-duration: 4s;
+    animation-timing-function: linear;
+}
+
+@keyframes tailMove {
+    0% {
+        transform: skew(0deg);
+    }
+    25% {
+        transform: skew(10deg) translateX(-20px);
+    }
+    75% {
+        transform: skew(-10deg) translateX(20px);
+    }
+    100% {
+        transform: skew(0deg);
+    }
+}
+
+#pleaseUseOther {
+    display: none;
 }

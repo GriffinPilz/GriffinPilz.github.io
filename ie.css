@@ -1,0 +1,17 @@
+#upperBody {
+    display: none;
+}
+
+#contactMe {
+    display: none;
+}
+
+#fishSVG {
+    display: none;
+}
+
+#pleaseUseOther {
+    display: inline-block;
+    text-align: center;
+    width: 100%;
+}
