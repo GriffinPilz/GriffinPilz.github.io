@@ -21,7 +21,7 @@ let sinDots = [];
     document.getElementById("upperBody").style.height = window.innerHeight+"px";
     for ( i = 0; i <= 14; i += 0.02 ) {
         x = i*200;
-        y = Math.sin( x/69 )/.04 + (window.innerHeight*.88);
+        y = Math.sin( x/69 )/.04 + 700;
         let dotCoords = {xCoord: x, yCoord: y};
         sinDots.push(dotCoords);
     }
