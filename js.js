@@ -1,3 +1,4 @@
+
 function removeClickerClasses() {
     document.getElementById("clicker").classList.remove("clickerOG");
     document.getElementById("clicker").classList.remove("clicker");
